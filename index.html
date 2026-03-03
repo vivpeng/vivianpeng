@@ -15,10 +15,9 @@
 <body>
     <!-- home -->
      <section id="home">
-        <canvas id="stars"></canvas>
-        <script src="stars.js"></script>
+        <div class="stars"></div>
 
-        <div class="home">
+        <div class="title">
             <h1>welcome to vivian's space</h1>
             <a href="#about" class="button">about me</a>
             <a href="#projects" class="button">my projects</a>
@@ -32,7 +31,7 @@
     <!-- about me -->
     <section id ="about">
         <div class="profile-wrapper">
-        <img class="avatar" src="images/me-1.png" alt="gif of vivian" />
+        <img class="me" src="images/me.png" alt="gif of vivian"/>
 
         <div class="profile-card">
             <h2>Vivian Zhuoqing Peng</h2>
@@ -55,6 +54,40 @@
             this part is currently under construction!
         </p>
     </section>
+
+    <!-- JS for the stars in home -->
+    <script>
+    const numStars = 40;
+    const starContainer = document.querySelector('.stars');
+    const homeSection = document.getElementById('home');
+
+    for (let i = 0; i < numStars; i++) {
+        const star = document.createElement('img');
+        // random star image
+        star.src = 'images/star-' + Math.floor(Math.random() * 4 + 1) + '.png';
+        star.classList.add('star');
+
+        // random size for star
+        const size = Math.random() * 20 + 10; // 10px to 30px
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+
+        // random position within home section
+        const x = Math.random() * homeSection.clientWidth;
+        const y = Math.random() * homeSection.clientHeight;
+
+        star.style.left = `${x}px`;
+        star.style.top = `${y}px`;
+
+        // random twinkle speed & delay
+        const duration = 2 + Math.random() * 5;
+        const delay = Math.random() * 5;
+        star.style.animationDuration = `${duration}s`;
+        star.style.animationDelay = `${delay}s`;
+        
+        starContainer.appendChild(star);
+    }
+    </script>
 
 </body>
 </html>
