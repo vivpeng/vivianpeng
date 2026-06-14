@@ -22,50 +22,28 @@ function Home() {
         <div className="absolute inset-0 pointer-events-none"></div>
 
         <div className="relative z-10">
-          <h1 className="text-5xl font-bold mb-6">
+          <h1 className="text-4xl mb-6">
             welcome to vivian's space
           </h1>
 
-          <a
-            href="#about"
-            className="
-              inline-block
-              m-[10px]
-              px-[18px]
-              py-[10px]
-              rounded-[20px]
-              bg-white
-              text-[#0E202F]
-              font-semibold
-              no-underline
-            "
-          >
-            about me
+          <a href="#about" className="home-button">
+            about
           </a>
 
-          <a
-            href="#projects"
-            className="
-              inline-block
-              m-[10px]
-              px-[18px]
-              py-[10px]
-              rounded-[20px]
-              bg-white
-              text-[#0E202F]
-              font-semibold
-              no-underline
-            "
-          >
-            my projects
+          <a href="#experience" className="home-button">
+            experience
           </a>
+
+          <a href="#projects" className="home-button">
+            projects
+          </a>
+
         </div>
       </section>
 
       <img
         src="/images/background-transition.png"
         alt="transition to next page"
-        className="block w-full"
       />
     </>
   );

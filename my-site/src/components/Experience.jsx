@@ -1,14 +1,14 @@
-function About() {
+function Experience() {
   return (
     <section
-      id="about"
+      id="experience"
       className="
         min-h-screen
         bg-[#FCF2EE]
       "
     >
         <h2 className="text-4xl font-bold mb-4">
-            about
+            experience
         </h2>
 
         <p>
@@ -18,4 +18,4 @@ function About() {
   );
 }
 
-export default About;
+export default Experience;

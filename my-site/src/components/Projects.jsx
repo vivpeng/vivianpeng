@@ -9,7 +9,7 @@ function Projects() {
       "
     >
       <h2 className="text-4xl font-bold mb-4">
-        My Projects
+        projects
       </h2>
 
       <p>
