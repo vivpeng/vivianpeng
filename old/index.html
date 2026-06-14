@@ -6,16 +6,13 @@
     <title>vivian peng</title>
     <link rel="stylesheet" href="style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-
     <link rel="icon" href="images/star-2.png">
 </head>
 <body>
     <!-- home! -->
      <section id="home">
         <div class="stars"></div>
+        <img class="firework" src="images/firework.png" alt="gif of firework"/>
 
         <div class="title">
             <h1>welcome to vivian's space</h1>
@@ -30,20 +27,7 @@
 
     <!-- about me -->
     <section id ="about">
-        <div class="profile-wrapper">
-        <img class="me" src="images/me.png" alt="gif of vivian"/>
 
-        <div class="profile-card">
-            <h2>Vivian Zhuoqing Peng</h2>
-            <p>
-                Hi! I'm an undergraduate Computer Science student at the University of British Columbia who's interested in <mark>combining creativity with coding</mark>
-                and <mark>building software that's valuable and user-focused</mark>💫. I'm always <mark>expanding my technical and design skills</mark> and <mark>creating cool projects</mark>!
-            </p>
-            <p>
-                In my free time, I enjoy playing the piano🎹, creating small doodles/animations🎨, and exploring horror and indie games👾.
-            </p>
-        </div>
-        </div>
     </section>
     <!-- create a horizontal scroll for my skills -->
 
@@ -63,6 +47,7 @@
 
     for (let i = 0; i < numStars; i++) {
         const star = document.createElement('img');
+        
         // random star image
         star.src = 'images/star-' + Math.floor(Math.random() * 4 + 1) + '.png';
         star.classList.add('star');
