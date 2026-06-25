@@ -5,7 +5,7 @@ function Projects() {
       className="
         min-h-screen
         bg-[#FCF2EE]
-        py-20
+        flex flex-col justify-start pt-24
       "
     >
       <h2 className="text-4xl font-bold mb-4">

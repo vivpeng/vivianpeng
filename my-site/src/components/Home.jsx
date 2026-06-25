@@ -1,52 +1,44 @@
 import Stars from "./Stars";
+import Typewriter from "./Typewriter"
 
 function Home() {
-  return (
-    <>
-      <section
-        id="home"
-        className="
+    return (
+        <>
+            <section
+                id="home"
+                className="
           relative
           min-h-screen
           flex
           items-center
           justify-center
-          bg-[#0E202F]
+          bg-[#070C1E]
           text-white
           overflow-hidden
         "
-      >
-        
-        <Stars />
+            >
 
-        <div className="absolute inset-0 pointer-events-none"></div>
+                <Stars />
 
-        <div className="relative z-10">
-          <h1 className="text-4xl mb-6">
-            welcome to vivian's space
-          </h1>
+                <div className="relative z-10 px-6 py-4 bg-[#070C1E]/80">
+                    <h1 className="text-5xl mb-6">
+                        vivian peng
+                    </h1>
 
-          <a href="#about" className="home-button">
-            about
-          </a>
+                    <p className="text-mid mb-6 italic">
+                        computer science @ UBC · qa automation engineer @ RBC
+                    </p>
 
-          <a href="#experience" className="home-button">
-            experience
-          </a>
+                    <Typewriter />
+                </div>
+            </section>
 
-          <a href="#projects" className="home-button">
-            projects
-          </a>
-
-        </div>
-      </section>
-
-      <img
-        src="/images/background-transition.png"
-        alt="transition to next page"
-      />
-    </>
-  );
+            <img
+                src="/images/background-transition.png"
+                alt="transition to next page"
+            />
+        </>
+    );
 }
 
 export default Home;
