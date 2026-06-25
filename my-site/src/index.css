@@ -45,7 +45,37 @@ body {
 
 .star {
   position: absolute;
-  animation-name: twinkle;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  opacity: 0;
+  transform: scale(0.6);
+  animation: starEnter 0.2s ease-out forwards;
+}
+
+@keyframes starEnter {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.first-fade-in {
+  opacity: 0;
+  transform: translateY(-15px);
+  animation: dropIn 1.0s ease-out forwards;
+}
+
+.second-fade-in {
+  opacity: 0;
+  transform: translateY(-15px);
+  animation: dropIn 1.0s ease-out 0.5s forwards;
+}
+
+@keyframes dropIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

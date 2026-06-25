@@ -1,7 +1,29 @@
+import { useEffect, useRef, useState } from "react";
+
 function About() {
+
+    const ref = useRef(null);
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setVisible(true);
+                }
+            },
+            { threshold: 0.4 }
+        );
+
+        if (ref.current) observer.observe(ref.current);
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <section
             id="about"
+            ref={ref}
             className="
         min-h-screen
         bg-[#FCF2EE]
@@ -9,7 +31,9 @@ function About() {
         px-6
       "
         >
-            <div className="max-w-2xl text-center">
+            <div className={`max-w-2xl text-center transition-all duration-3000 ease-out
+                ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
+                `}>
                 <h2 className="text-4xl font-bold mb-6">
                     about
                 </h2>
@@ -47,7 +71,7 @@ function About() {
                     {/* GitHub */}
                     <a
                         href="https://github.com/vivpeng"
-                        className="w-11 h-11 flex items-center justify-center rounded-full border border-gray-400 text-gray-700 hover:bg-black hover:text-white transition"
+                        className="w-11 h-11 flex items-center justify-center rounded-full border border-gray-400 text-gray-700 hover:bg-gray-900 hover:text-white transition"
                         aria-label="GitHub"
                     >
                         <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
@@ -58,7 +82,7 @@ function About() {
                     {/* LinkedIn */}
                     <a
                         href="https://www.linkedin.com/in/vivianzhqpeng/"
-                        className="w-11 h-11 flex items-center justify-center rounded-full border border-gray-400 text-gray-700 hover:bg-blue-600 hover:text-white transition"
+                        className="w-11 h-11 flex items-center justify-center rounded-full border border-gray-400 text-gray-700 hover:bg-gray-900 hover:text-white transition"
                         aria-label="LinkedIn"
                     >
                         <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">

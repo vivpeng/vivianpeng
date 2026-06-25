@@ -14,7 +14,7 @@ function App() {
                 setIsHomeVisible(entry.isIntersecting);
             },
             {
-                threshold: 0.4,
+                threshold: 0.2,
             }
         );
 
@@ -32,6 +32,7 @@ function App() {
             fixed top-0 left-0 w-full z-50
             flex justify-center pt-6
             transition-all duration-300
+            first-fade-in
             ${isHomeVisible
                     ? "text-white"
                     : "text-[#070C1E]"
@@ -43,7 +44,7 @@ function App() {
             transition-all duration-300
             ${isHomeVisible
                         ? "bg-[#070C1E]/50 backdrop-blur-sm"
-                        : "bg-[#FCF2EE]]/50 backdrop-blur-sm"
+                        : "bg-[#FCF2EE]/50 backdrop-blur-sm"
                     }
         `}
                 >
