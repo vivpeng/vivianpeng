@@ -20,7 +20,7 @@ function Home() {
 
                 <Stars />
 
-                <div className="relative z-10 px-6 py-4 bg-[#070C1E]/80">
+                <div className="relative z-10 px-6 py-4 bg-[#070C1E]/50">
                     <h1 className="text-5xl mb-6 first-fade-in">
                         vivian peng
                     </h1>
