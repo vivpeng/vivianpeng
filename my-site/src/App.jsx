@@ -29,7 +29,7 @@ function App() {
 
         <>
             <header className={`
-            fixed top-0 left-0 w-full z-50
+            fixed top-0 left-0 w-full z-[9999]
             flex justify-center pt-6
             transition-all duration-300
             first-fade-in
