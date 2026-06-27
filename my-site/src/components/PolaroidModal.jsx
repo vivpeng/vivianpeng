@@ -1,0 +1,102 @@
+import { useState } from "react";
+
+function PolaroidModal({ project, onClose }) {
+  const [index, setIndex] = useState(0);
+
+  if (!project) return null;
+
+  const images = project.images || [project.image];
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <div
+        className="bg-white w-[90%] max-w-3xl max-h-[85vh] overflow-hidden shadow-2xl flex flex-col"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* IMAGE GALLERY */}
+        <div className="relative bg-black flex items-center justify-center h-64">
+          <img
+            src={images[index]}
+            className="w-full h-full object-cover"
+          />
+
+          {/* left arrow */}
+          {images.length > 1 && (
+            <button
+              className="absolute left-3 text-white text-2xl"
+              onClick={() =>
+                setIndex((i) => (i - 1 + images.length) % images.length)
+              }
+            >
+              ‹
+            </button>
+          )}
+
+          {/* right arrow */}
+          {images.length > 1 && (
+            <button
+              className="absolute right-3 text-white text-2xl"
+              onClick={() =>
+                setIndex((i) => (i + 1) % images.length)
+              }
+            >
+              ›
+            </button>
+          )}
+
+          {/* dots */}
+          <div className="absolute bottom-2 flex gap-1">
+            {images.map((_, i) => (
+              <div
+                key={i}
+                className={`w-2 h-2 rounded-full ${
+                  i === index ? "bg-white" : "bg-white/40"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* CONTENT (SCROLLABLE) */}
+        <div className="p-6 overflow-y-auto">
+          <h2 className="text-2xl font-bold">{project.title}</h2>
+
+          <p className="text-sm text-gray-700 mt-3 whitespace-pre-line">
+            {project.description}
+          </p>
+
+          {/* tech */}
+          <div className="flex flex-wrap gap-2 mt-4">
+            {project.tech.map((t, i) => (
+              <span
+                key={i}
+                className="text-xs border px-2 py-1 rounded-full"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+
+          {/* links */}
+          <div className="flex gap-4 mt-6">
+            {project.github && (
+              <a className="underline" href={project.github}>
+                GitHub
+              </a>
+            )}
+            {project.demo && (
+              <a className="underline" href={project.demo}>
+                Live Demo
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default PolaroidModal;
