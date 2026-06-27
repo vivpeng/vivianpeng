@@ -46,15 +46,15 @@ function About() {
 
                 <img
                     src="/images/mountain-1.png"
-                    className={`absolute bottom-0 right-0 z-10
-        transition-all duration-1000 ease-out w-[90vw]
+                    className={`absolute bottom-10 right-0 z-10
+        transition-all duration-1000 ease-out w-[90vw] 
         ${mountainsVisible ? "translate-x-0 opacity-100" : "translate-x-24 opacity-0"}
     `}
                 />
 
                 <img
                     src="/images/mountain-2.png"
-                    className={`absolute bottom-0 left-0 z-20
+                    className={`absolute bottom-10 left-0 z-20
         transition-all duration-1000 ease-out delay-300 w-[90vw]
         ${mountainsVisible ? "translate-x-0 opacity-100" : "-translate-x-24 opacity-0"}
     `}

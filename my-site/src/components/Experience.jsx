@@ -61,7 +61,7 @@ function Experience() {
     return (
         <section
             id="experience"
-            className="min-h-screen bg-[#FCF2EE] flex flex-col pt-24"
+            className="min-h-screen bg-[#C7DDF8] flex flex-col pt-24"
         >
             <div className="w-full max-w-4xl mx-auto px-6">
                 <h2 className="text-4xl font-bold mb-10">experience</h2>
