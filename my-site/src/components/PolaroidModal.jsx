@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FiExternalLink } from "react-icons/fi";
 
 function PolaroidModal({ project, onClose }) {
   const [index, setIndex] = useState(0);
@@ -83,13 +84,18 @@ function PolaroidModal({ project, onClose }) {
           {/* links */}
           <div className="flex gap-4 mt-6">
             {project.github && (
-              <a className="underline" href={project.github}>
-                GitHub
+              <a className="underline" href={project.github} target="_blank" rel="noopener noreferrer">
+                GitHub <FiExternalLink className="text-sm" />
               </a>
             )}
             {project.demo && (
-              <a className="underline" href={project.demo}>
-                Live Demo
+              <a className="underline" href={project.demo} target="_blank" rel="noopener noreferrer">
+                Demo <FiExternalLink className="text-sm" />
+              </a>
+            )}
+            {project.website && (
+              <a className="underline" href={project.website} target="_blank" rel="noopener noreferrer">
+                Website <FiExternalLink className="text-sm" />
               </a>
             )}
           </div>

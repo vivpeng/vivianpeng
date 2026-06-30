@@ -5,17 +5,18 @@ export const projects = [
     teaser: "woah",
     description:
       "Short description of what this project does and why it's interesting.",
-    tech: ["React", "Tailwind", "Node"],
+    tech: ["JavaScript", "HTML", "CSS", "Supabase"],
     images: ["/images/project1-1.png", "/images/project1-2.png"],
-    github: "",
-    demo: "",
+    github: "https://github.com/vivpeng/youcode-2026",
+    demo: "https://youtu.be/p8Kdu08og0k",
+    website: "https://vivpeng.github.io/youcode-2026/",
   },
   {
     id: 2,
-    title: "Exchangify",
+    title: "Berry",
     description:
       "Short description of what this project does and why it's interesting.",
-    tech: ["Python", "Flask"],
+    tech: ["Python"],
     image: "/images/project2.png",
     github: "",
     demo: "",
@@ -25,9 +26,9 @@ export const projects = [
     title: "Vancouver Cafe Hopper",
     description:
       "Short description of what this project does and why it's interesting.",
-    tech: ["React", "Firebase"],
+    tech: ["Java", "JSON"],
     image: "/images/project3.png",
-    github: "",
+    github: "https://github.com/vivpeng/cafe-hopper",
     demo: "",
   },
   {
@@ -35,7 +36,7 @@ export const projects = [
     title: "Portfolio Website",
     description:
       "Short description of what this project does and why it's interesting.",
-    tech: ["Java", "SQL"],
+    tech: ["React", "Tailwind CSS", "JavaScript", "HTML"],
     image: "/images/project4.png",
     github: "",
     demo: "",
@@ -45,9 +46,9 @@ export const projects = [
     title: "Toffee's Quest",
     description:
       "Short description of what this project does and why it's interesting.",
-    tech: ["C++", "Algorithms"],
+    tech: ["Java"],
     image: "/images/project5.png",
-    github: "",
+    github: "https://github.com/vivpeng/toffees-quest",
     demo: "",
   },
 ];
