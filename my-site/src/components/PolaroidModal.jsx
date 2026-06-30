@@ -16,7 +16,7 @@ function PolaroidModal({ project, onClose }) {
         className="bg-white w-[90%] max-w-3xl max-h-[85vh] overflow-hidden shadow-2xl flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* IMAGE GALLERY */}
+        {/* image gallery */}
         <div className="relative bg-black flex items-center justify-center h-64">
           <img
             src={images[index]}
