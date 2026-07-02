@@ -95,7 +95,7 @@ function PolaroidModal({ project, onClose }) {
             )}
             {project.website && (
               <a className="underline" href={project.website} target="_blank" rel="noopener noreferrer">
-                Website <FiExternalLink className="text-sm" />
+                Check it out! <FiExternalLink className="text-sm" />
               </a>
             )}
           </div>

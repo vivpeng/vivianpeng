@@ -2,11 +2,11 @@ export const projects = [
   {
     id: 1,
     title: "Motion",
-    teaser: "woah",
+    teaser: "An organizer made to assist non-profits in managing volunteers and shifts. 1st place winner in the beginner stream at UBC WiCS's YouCode Hackathon!",
     description:
-      "Short description of what this project does and why it's interesting.",
+      "so.",
     tech: ["JavaScript", "HTML", "CSS", "Supabase"],
-    images: ["/images/project1-1.png", "/images/project1-2.png"],
+    images: ["/images/motion-1.png", "/images/project1-2.png"],
     github: "https://github.com/vivpeng/youcode-2026",
     demo: "https://youtu.be/p8Kdu08og0k",
     website: "https://vivpeng.github.io/youcode-2026/",

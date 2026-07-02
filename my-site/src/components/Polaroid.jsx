@@ -45,8 +45,8 @@ function Polaroid({ project, style, onClick }) {
         <div
           className="fixed z-[999] pointer-events-none bg-black text-white text-xs px-3 py-2 rounded-md max-w-[220px] shadow-lg"
           style={{
-            left: mousePos.x + 15,
-            top: mousePos.y + 15,
+            left: mousePos.x,
+            top: mousePos.y - 30,
           }}
         >
           {project.teaser}
