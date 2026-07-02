@@ -11,7 +11,6 @@ function About() {
             ([entry]) => {
                 if (entry.isIntersecting) {
                     setVisible(true);
-
                     setTimeout(() => setMountainsVisible(true), 300);
                 }
             },
@@ -78,7 +77,8 @@ function About() {
             </div>
 
             {/* MAIN CONTENT */}
-            <div className={`relative z-50 max-w-3xl w-full transition-all duration-3000 ease-out                ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
+            <div className={`relative z-50 max-w-3xl w-full transition-all duration-3000 ease-out
+            ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
             `}>
 
                 {/* TITLE */}
@@ -107,6 +107,7 @@ function About() {
                                 href="https://github.com/vivpeng"
                                 className="w-10 h-10 flex items-center justify-center rounded-full border hover:bg-[#FCF2EE] transition"
                                 aria-label="GitHub"
+                                target="_blank" rel="noopener noreferrer"
                             >
                                 <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
                                     <path d="M12 .5C5.7.5.8 5.4.8 11.8c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-5.8 0-1.3.5-2.4 1.3-3.3-.1-.3-.6-1.5.1-3.1 0 0 1-.3 3.4 1.3a11.5 11.5 0 0 1 6.2 0C17.4 5.3 18.4 5.6 18.4 5.6c.7 1.6.2 2.8.1 3.1.8.9 1.3 2 1.3 3.3 0 4.5-2.8 5.5-5.4 5.8.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.2 5.4 18.3.5 12 .5z" />
@@ -117,6 +118,7 @@ function About() {
                                 href="https://www.linkedin.com/in/vivianzhqpeng/"
                                 className="w-10 h-10 flex items-center justify-center rounded-full border hover:bg-[#FCF2EE] transition"
                                 aria-label="LinkedIn"
+                                target="_blank" rel="noopener noreferrer"
                             >
                                 <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
                                     <path d="M4.98 3.5C4.98 4.9 3.87 6 2.5 6S0 4.9 0 3.5 1.12 1 2.5 1s2.48 1.1 2.48 2.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.1c.7-1.3 2.4-2.7 5-2.7 5.3 0 6.3 3.5 6.3 8v8.5h-5V15c0-2.2 0-5-3-5s-3.4 2.3-3.4 4.8V24h-5V8z" />

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState, useRef} from "react";
 
 function ExperienceItem({ company, location, role, period, logo, children }) {
     const [open, setOpen] = useState(false);
@@ -58,16 +58,38 @@ function ExperienceItem({ company, location, role, period, logo, children }) {
 }
 
 function Experience() {
+
+    const ref = useRef(null);
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setVisible(true);
+                }
+            },
+            { threshold: 0.4 }
+        );
+
+        if (ref.current) observer.observe(ref.current);
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <section
             id="experience"
+            ref = {ref}
             className="min-h-screen bg-[#C7DDF8] flex flex-col pt-24"
         >
-            <div className="w-full max-w-4xl mx-auto px-6">
+            <div className={`w-full max-w-4xl mx-auto px-6 transition-all duration-3000 ease-out
+                ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"} `}>
                 <h2 className="text-4xl font-bold mb-10">experience</h2>
 
                 <div className="space-y-6">
                     <ExperienceItem
+                
                         company="Royal Bank of Canada"
                         location="Vancouver, BC"
                         role="Quality Assurance Automation Engineer"
@@ -80,8 +102,6 @@ function Experience() {
                             <li>points</li>
                         </ul>
                     </ExperienceItem>
-
-                    {/* <ExperienceItem ... /> */}
                 </div>
             </div>
         </section>

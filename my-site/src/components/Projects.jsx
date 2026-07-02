@@ -1,10 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState, useRef} from "react";
 import { projects } from "../data/projects";
 import Polaroid from "./Polaroid";
 import PolaroidModal from "./PolaroidModal";
 
 function Projects() {
+    
   const [selected, setSelected] = useState(null);
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setVisible(true);
+                }
+            },
+            { threshold: 0.4 }
+        );
+
+        if (ref.current) observer.observe(ref.current);
+
+        return () => observer.disconnect();
+    }, []);
 
   // polaroid scatter layout
   const layout = [
@@ -18,6 +36,7 @@ function Projects() {
   return (
     <section
       id="projects"
+      ref = {ref}
       className="relative min-h-screen overflow-hidden pt-24 bg-[#C7DDF8]"
     >
       {/* dock background */}
@@ -29,12 +48,14 @@ function Projects() {
       </div> */}
 
       {/* title */}
-      <h2 className="relative z-10 text-4xl font-bold text-center mb-10">
+      <h2 className={`relative z-10 text-4xl font-bold text-center mb-10 transition-all duration-3000 ease-out
+                ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"} `}>
         projects
       </h2>
 
       {/* polaroids */}
-      <div className="relative z-10 w-full h-[80vh]">
+      <div className={`relative z-10 w-full h-[80vh] transition-all duration-3000 ease-out
+                ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"} `}>
         {projects.map((project, i) => {
           const pos = layout[i];
 
