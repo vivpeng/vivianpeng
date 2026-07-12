@@ -48,11 +48,6 @@ function App() {
                     }
         `}
                 >
-
-                    <a href="#home" className="hover:opacity-60 transition">
-                        home
-                    </a>
-
                     <a href="#about" className="hover:opacity-60 transition">
                         about
                     </a>

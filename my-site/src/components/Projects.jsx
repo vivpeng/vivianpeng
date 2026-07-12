@@ -1,21 +1,19 @@
-import { useEffect, useState, useRef} from "react";
+import { useEffect, useState, useRef } from "react";
 import { projects } from "../data/projects";
 import Polaroid from "./Polaroid";
 import PolaroidModal from "./PolaroidModal";
 
 function Projects() {
-    
-  const [selected, setSelected] = useState(null);
-  const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
+    const [selected, setSelected] = useState(null);
+    const [visible, setVisible] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(0);
 
-  useEffect(() => {
+    const ref = useRef(null);
+    const carouselRef = useRef(null);
+
+    useEffect(() => {
         const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setVisible(true);
-                }
-            },
+            ([entry]) => setVisible(entry.isIntersecting),
             { threshold: 0.4 }
         );
 
@@ -24,63 +22,75 @@ function Projects() {
         return () => observer.disconnect();
     }, []);
 
-  // polaroid scatter layout
-  const layout = [
-    { top: "15%", left: "10%", rotate: "-6deg" },
-    { top: "10%", left: "40%", rotate: "4deg" },
-    { top: "18%", left: "70%", rotate: "-3deg" },
-    { top: "55%", left: "20%", rotate: "5deg" },
-    { top: "60%", left: "60%", rotate: "-4deg" },
-  ];
+    const scroll = (direction) => {
+        const newIndex = activeIndex + direction;
 
-  return (
-    <section
-      id="projects"
-      ref = {ref}
-      className="relative min-h-screen overflow-hidden pt-24 bg-[#C7DDF8]"
-    >
-      {/* dock background */}
-      {/* <div className="absolute inset-0 z-0">
-        <img
-          src="/images/dock.png"
-          className="w-full h-full object-cover"
-        />
-      </div> */}
+        if (newIndex >= 0 && newIndex < projects.length) {
+            setActiveIndex(newIndex);
 
-      {/* title */}
-      <h2 className={`relative z-10 text-4xl font-bold text-center mb-10 transition-all duration-3000 ease-out
-                ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"} `}>
-        projects
-      </h2>
+            carouselRef.current.scrollBy({
+                left: direction * 250,
+                behavior: "smooth",
+            });
+        }
+    };
 
-      {/* polaroids */}
-      <div className={`relative z-10 w-full h-[80vh] transition-all duration-3000 ease-out
-                ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"} `}>
-        {projects.map((project, i) => {
-          const pos = layout[i];
+    return (
+        <section
+            id="projects"
+            ref={ref}
+            className="relative min-h-screen overflow-hidden pt-24 bg-[#B9D9EB]"
+        >
+            <h2
+                className={`text-4xl font-bold text-center mb-20 transition-all duration-3000 ease-out
+                ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+            >
+                projects
+            </h2>
 
-          return (
-            <Polaroid
-              key={project.id}
-              project={project}
-              onClick={() => setSelected(project)}
-              style={{
-                top: pos.top,
-                left: pos.left,
-                transform: `rotate(${pos.rotate})`,
-              }}
+            <div className="relative">
+                <button
+                    onClick={() => scroll(-1)}
+                    className="absolute left-5 top-1/2 -translate-y-1/2 z-20 text-3xl cursor-pointer"
+                >
+                    ←
+                </button>
+
+                <div
+                    ref={carouselRef}
+                    className="
+                        flex gap-12 overflow-x-auto
+                        px-[40vw] py-10
+                        snap-x snap-mandatory
+                        scrollbar-hide
+                    "
+                >
+                    {projects.map((project, index) => (
+                        <Polaroid
+                            key={project.id}
+                            project={project}
+                            index={index}
+                            active={index === activeIndex}
+                            onClick={() => { setSelected(project);
+                                        }}
+                        />
+                    ))}
+                </div>
+
+                <button
+                    onClick={() => scroll(1)}
+                    className="absolute right-5 top-1/2 -translate-y-1/2 z-20 text-3xl cursor-pointer"
+                >
+                    →
+                </button>
+            </div>
+
+            <PolaroidModal
+                project={selected}
+                onClose={() => setSelected(null)}
             />
-          );
-        })}
-      </div>
-
-      {/* modal */}
-      <PolaroidModal
-        project={selected}
-        onClose={() => setSelected(null)}
-      />
-    </section>
-  );
+        </section>
+    );
 }
 
 export default Projects;
