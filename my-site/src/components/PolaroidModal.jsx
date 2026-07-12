@@ -60,6 +60,8 @@ function PolaroidModal({ project, onClose }) {
                     </div>
                 </div>
 
+                
+
                 {/* content */}
                 <div className="p-6 overflow-y-auto">
                     {/* title */}
@@ -68,7 +70,7 @@ function PolaroidModal({ project, onClose }) {
                     {/* text */}
                     <div className="text-sm mt-5">
                         {project.description.map((section, index) => (
-                            <div key={index} className="mb-3">
+                            <div key={index} className="mb-5">
                                 <h3 className="font-semibold">{section.heading}</h3>
                                 <p className="text-[#070C1E] mt-2">{section.text}</p>
                             </div>
@@ -80,7 +82,7 @@ function PolaroidModal({ project, onClose }) {
                         {project.tech.map((t, i) => (
                             <span
                                 key={i}
-                                className="text-xs border px-2 py-1 rounded-full"
+                                className="text-xs border px-1 py-1 rounded-full"
                             >
                                 {t}
                             </span>
