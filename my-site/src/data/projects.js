@@ -41,7 +41,7 @@ export const projects = [
             text: "All the art on this website is designed and created by me using Procreate."
         }
     ],
-    tech: ["React", "Tailwind CSS", "JavaScript", "HTML", "UI/UX Design"],
+    tech: ["React", "Tailwind CSS", "JavaScript", "Vite", "HTML", "UI/UX Design"],
     images: ["/images/portfolio/portfolio-1.png", "/images/portfolio/portfolio-2.png", "/images/portfolio/portfolio-3.png"],
     github: "https://github.com/vivpeng/vivianpeng",
   },
