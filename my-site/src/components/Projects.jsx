@@ -13,7 +13,12 @@ function Projects() {
 
     useEffect(() => {
         const observer = new IntersectionObserver(
-            ([entry]) => setVisible(entry.isIntersecting),
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setVisible(true);
+                    observer.disconnect(); // stop watching after first appearance
+                }
+            },
             { threshold: 0.4 }
         );
 
@@ -71,8 +76,9 @@ function Projects() {
                             project={project}
                             index={index}
                             active={index === activeIndex}
-                            onClick={() => { setSelected(project);
-                                        }}
+                            onClick={() => {
+                                setSelected(project);
+                            }}
                         />
                     ))}
                 </div>
