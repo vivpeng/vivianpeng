@@ -99,7 +99,7 @@ function Experience() {
                         <ul className="list-disc pl-5 space-y-5 text-black text-left leading-relaxed">
                             <li>Built automated regression tests using Python and Playwright to validate UI functionality, API behavior, and end-to-end scenarios for client-facing and internal financial platforms. </li>
                             <li>Increased automated test reliability and coverage by debugging failures through log analysis, code tracing, UI validation, and targeted fixes to address script, data, and application issues.</li>
-                            <li>Ensured production readiness across QAT/UAT environments by validating application behavior through SQL queries, API responses, and database verification, identifying defects before release.</li>
+                            <li>Ensured production readiness across QAT/UAT environments by validating application behavior through manual testing, API responses, and SQL database verification, identifying defects before release.</li>
                             <li>Expanded automated testing capabilities by designing scalable test structures based on existing frameworks and onboarding new applications into regression testing pipelines.</li>
                             <li>Collaborated with team in Agile sprint workflows to investigate defects, validate fixes, and deliver production-ready features.</li>
                         </ul>
