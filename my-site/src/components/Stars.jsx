@@ -6,7 +6,7 @@ function Stars() {
       image: `/images/star-${Math.floor(Math.random() * 4 + 1)}.png`,
       size: Math.random() * 20 + 15,
       left: Math.random() * 100,
-      top: Math.random() * 100,
+      top: Math.random() * 90 + 5,
       duration: 2 + Math.random() * 5,
       delay: Math.random() * 5,
     }));

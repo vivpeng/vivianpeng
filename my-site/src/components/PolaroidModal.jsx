@@ -14,9 +14,19 @@ function PolaroidModal({ project, onClose }) {
             onClick={onClose}
         >
             <div
-                className="bg-white w-[90%] max-w-3xl max-h-[85vh] overflow-hidden shadow-2xl flex flex-col"
+                className="relative bg-white w-[90%] max-w-3xl max-h-[85vh] overflow-hidden shadow-2xl flex flex-col"
                 onClick={(e) => e.stopPropagation()}
             >
+
+                {/* close button */}
+                <button
+                    onClick={onClose}
+                    className="absolute top-3 right-3 z-20 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-2xl text-gray-700 shadow hover:bg-white hover:text-black transition cursor-pointer"
+                    aria-label="Close modal"
+                >
+                    ×
+                </button>
+
                 {/* image gallery */}
                 <div className="relative bg-black flex items-center justify-center h-80">
                     <img

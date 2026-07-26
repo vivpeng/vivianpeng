@@ -41,11 +41,8 @@ function App() {
             >
                 <nav className={`
             flex gap-10 text-sm tracking-wide px-6 py-3 rounded-full
-            transition-all duration-300
-            ${isHomeVisible
-                        ? "bg-[#070C1E]/50 backdrop-blur-sm"
-                        : "bg-[#FCF2EE]/50 backdrop-blur-sm"
-                    }
+            transition-all duration-300 bg-transparent backdrop-blur-sm
+
         `}
                 >
                     <a href="#about" className="hover:opacity-60 transition">
