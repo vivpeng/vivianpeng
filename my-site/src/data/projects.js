@@ -30,15 +30,11 @@ export const projects = [
     description: [
         {
             heading: "A bit about this project",
-            text: "I went into this website with the hopes of making something that would reflect both"
+            text: "I went into this website with the hopes of making something that would reflect both my technical experience and creative personality. I designed this website incorporating personally hand drawn visuals with an accessible, clean layout to create a digital space that feels uniquely my own. This website represents not only my growth as a developer through the various projects and skills I have developed, but also my interest in exploring the intersection between software development, design, and user experience."
         },
         {
             heading: "Features",
-            text: "i'm working on writing this one (:"
-        },
-        {
-            heading: "Fun fact",
-            text: "All the art on this website is designed and created by me using Procreate."
+            text: "This website was built using React and Tailwind CSS, with a component-based architecture to create reusable and maintainable UI elements. It incorporates features such as scroll-based animations, dynamic project cards, modal displays, and hover effects to create a more engaging user experience. The site also includes responsive layouts for different screen sizes, custom illustrations and visual assets integrated throughout the interface, and smooth transitions to enhance navigation. Built with modern web development practices, the website demonstrates front-end development skills including state management, component composition, styling systems, and deployment workflows."
         }
     ],
     tech: ["React", "Tailwind CSS", "JavaScript", "Vite", "HTML", "UI/UX Design"],

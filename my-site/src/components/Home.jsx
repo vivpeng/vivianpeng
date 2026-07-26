@@ -26,7 +26,7 @@ function Home() {
                     </h1>
 
                     <p className="text-mid mb-6 italic second-fade-in">
-                        computer science @ UBC · qa automation engineer @ RBC
+                        computer science @ UBC
                     </p>
 
                     <Typewriter />

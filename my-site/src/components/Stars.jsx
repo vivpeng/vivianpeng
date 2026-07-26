@@ -4,7 +4,7 @@ function Stars() {
   const stars = useMemo(() => {
     return Array.from({ length: 40 }, () => ({
       image: `/images/star-${Math.floor(Math.random() * 4 + 1)}.png`,
-      size: Math.random() * 20 + 15,
+      size: Math.random() * 15 + 10,
       left: Math.random() * 100,
       top: Math.random() * 90 + 5,
       duration: 2 + Math.random() * 5,
