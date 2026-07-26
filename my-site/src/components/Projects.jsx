@@ -6,7 +6,6 @@ import PolaroidModal from "./PolaroidModal";
 function Projects() {
     const [selected, setSelected] = useState(null);
     const [visible, setVisible] = useState(false);
-    const [activeIndex, setActiveIndex] = useState(0);
 
     const ref = useRef(null);
     const carouselRef = useRef(null);
@@ -16,7 +15,7 @@ function Projects() {
             ([entry]) => {
                 if (entry.isIntersecting) {
                     setVisible(true);
-                    observer.disconnect(); // stop watching after first appearance
+                    observer.disconnect();
                 }
             },
             { threshold: 0.4 }
@@ -28,16 +27,10 @@ function Projects() {
     }, []);
 
     const scroll = (direction) => {
-        const newIndex = activeIndex + direction;
-
-        if (newIndex >= 0 && newIndex < projects.length) {
-            setActiveIndex(newIndex);
-
-            carouselRef.current.scrollBy({
-                left: direction * 250,
-                behavior: "smooth",
-            });
-        }
+        carouselRef.current.scrollBy({
+            left: direction * 250,
+            behavior: "smooth",
+        });
     };
 
     return (
@@ -75,10 +68,7 @@ function Projects() {
                             key={project.id}
                             project={project}
                             index={index}
-                            active={index === activeIndex}
-                            onClick={() => {
-                                setSelected(project);
-                            }}
+                            onClick={() => setSelected(project)}
                         />
                     ))}
                 </div>

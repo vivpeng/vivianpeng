@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Polaroid({ project, index, active, onClick }) {
+function Polaroid({ project, index, onClick }) {
     const [hovered, setHovered] = useState(false);
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
@@ -10,13 +10,9 @@ function Polaroid({ project, index, active, onClick }) {
     return (
         <>
             <div
-                className={`
-                    cursor-pointer transition-transform duration-500
-                    ${active ? "z-20" : "opacity-70"}
-                `}
+                className="cursor-pointer transition-transform duration-500 z-20"
                 style={{
-                    transform: `rotate(${rotation}deg)
-                                scale(${hovered ? 1.15 : active ? 1.1 : 0.9})`,
+                    transform: `rotate(${rotation}deg) scale(${hovered ? 1.05 : 1})`,
                 }}
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
