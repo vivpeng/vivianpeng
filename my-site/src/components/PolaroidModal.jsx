@@ -21,7 +21,7 @@ function PolaroidModal({ project, onClose }) {
                 {/* close button */}
                 <button
                     onClick={onClose}
-                    className="absolute top-3 right-3 z-20 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-2xl text-gray-700 shadow hover:bg-white hover:text-black transition cursor-pointer"
+                    className="absolute top-3 right-3 z-20 flex h-9 w-9 items-center justify-center text-3xl text-white hover:text-gray-300 transition cursor-pointer"
                     aria-label="Close modal"
                 >
                     ×
@@ -70,7 +70,7 @@ function PolaroidModal({ project, onClose }) {
                     </div>
                 </div>
 
-                
+
 
                 {/* content */}
                 <div className="p-6 overflow-y-auto">
