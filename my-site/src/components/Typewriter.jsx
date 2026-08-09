@@ -1,50 +1,52 @@
 import { useEffect, useState } from "react";
 
-const words = [
-  "building and testing reliable software systems",
-  "designing games and interactive experiences",
-  "combining code with creativity",
-  "exploring and learning through experimentation"
-];
+function Typewriter({ onComplete }) {
+    const text = "hey! i'm vivian";
 
-function Typewriter() {
-  const [text, setText] = useState("");
-  const [index, setIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [deleting, setDeleting] = useState(false);
+    const [charIndex, setCharIndex] = useState(0);
+    const [showCursor, setShowCursor] = useState(true);
 
-  useEffect(() => {
-    const current = words[index];
-    const speed = deleting ? 30 : 60;
+    useEffect(() => {
+        // Type the text
+        if (charIndex < text.length) {
+            const timeout = setTimeout(() => {
+                setCharIndex((prev) => prev + 1);
+            }, 80);
 
-    const timeout = setTimeout(() => {
-      if (!deleting) {
-        setText(current.substring(0, charIndex + 1));
-        setCharIndex(charIndex + 1);
-
-        if (charIndex + 1 === current.length) {
-          setTimeout(() => setDeleting(true), 1200);
+            return () => clearTimeout(timeout);
         }
-      } else {
-        setText(current.substring(0, charIndex - 1));
-        setCharIndex(charIndex - 1);
 
-        if (charIndex === 0) {
-          setDeleting(false);
-          setIndex((index + 1) % words.length);
-        }
-      }
-    }, speed);
+        // Wait 2 seconds, then show bottom text
+        const fadeInTimeout = setTimeout(() => {
+            onComplete();
 
-    return () => clearTimeout(timeout);
-  }, [charIndex, deleting, index]);
+            // Keep cursor flashing for another 2 seconds
+            const cursorTimeout = setTimeout(() => {
+                setShowCursor(false);
+            }, 3000);
 
-  return (
-    <p className="text-sm text-gray-300 tracking-wide mt-2">
-      {text}
-      <span className="animate-pulse">|</span>
-    </p>
-  );
+            return () => clearTimeout(cursorTimeout);
+        }, 1000);
+
+        return () => clearTimeout(fadeInTimeout);
+    }, [charIndex, onComplete]);
+
+    const typedText = text.substring(0, charIndex);
+
+    const prefix = "hey! i'm ";
+    const typedPrefix = typedText.substring(0, prefix.length);
+    const typedVivian = typedText.substring(prefix.length);
+
+    return (
+        <h1 className="text-4xl">
+            <span>{typedPrefix}</span>
+            <span className="mynerve">{typedVivian}</span>
+
+            {showCursor && (
+                <span className="typewriter-cursor">|</span>
+            )}
+        </h1>
+    );
 }
 
 export default Typewriter;

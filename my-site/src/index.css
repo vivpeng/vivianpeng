@@ -2,7 +2,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: "Courier Prime", monospace;
+  font-family: "DM Mono";
 }
 
 body {
@@ -11,6 +11,54 @@ body {
 
   text-align: center;
   background-color: #FCF2EE;
+}
+
+/* MYNERVE */
+
+.mynerve {
+    font-family: "Mynerve";
+}
+
+/* TYPEWRITER CURSOR */
+
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 3px;
+  font-family: "DM Mono";
+  animation: cursorBlink 0.8s steps(1) infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 50% {
+    opacity: 1;
+  }
+
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/* UBC TEXT */
+
+.second-fade-in {
+  animation: softPop 0.6s ease-out forwards;
+}
+
+@keyframes softPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* HOME */
