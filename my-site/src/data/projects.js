@@ -1,23 +1,10 @@
 export const projects = [
   {
     id: 1,
-    title: "Motion",
-    teaser: "1st place winner in its stream at YouCode Hackathon! An organizer made to assist non-profits in managing volunteers and shifts.",
-    description: [
-        {
-            heading: "A bit about this project",
-            text: "This project was ideated and built by Arielle, Lana, and I for the YouCode 2026 Hackathon. The challange was to design a technological solution that strengthens the human capacity of BC's nonprofit sector, helping organizations find, support, and retain the people they need to keep serving their communities. Drawing from a past internship experience with a non-profit, our team recalled that coordinating volunteers who make non-profits possible is a mess of spreadsheets, outdated and unspecialized software, and expensive tools locked behind paywalls. Upon further research, we found that existing volunteer management tools often additionally require reaching out to a sales professional for software access. So, we decided to build this free and user-friendly organizer."
-        },
-        {
-            heading: "Features",
-            text: `Motion is an accessible, user-friendly website designed for nonprofit organizations to manage volunteers and positions for events and community initiatives, with a simple drag-and-drop interface. It includes functionality to add volunteers based on availability, skills, and contact info, as well as define volunteer positions based on schedules, volunteer capacity, and required skills. Other features include a "view all" functionality that provides an overview of all positions and volunteers, an auto-assign feature that automatically assigns volunteers to positions based on skills and availability, and a search bar that allows users to search volunteer positions. Additionally, it has a sign-in which saves user accounts using their email.`
-        },
-        {
-            heading: "Fun fact",
-            text: "Motion won 1st place in the beginner stream at UBC Women in Computer Science x Women in Data Science YouCode 2026 Hackathon!"
-        }
-    ],
-    tech: ["JavaScript", "HTML", "CSS", "Supabase", "UI/UX Design"],
+    title: "motion",
+    teaser: "1st place winner in its stream at wics x wids youcode 2026 hackathon. a user-friendly website made for nonprofits to manage volunteers and shifts, with a drag-and-drop interface, auto-assign, sorting functionality, and sign-in to save.",
+    tech: ["javascript", "html", "css", "supabass", "ui/ux design"],
+    icon: "/images/motion/motion-icon.png",
     images: ["/images/motion/motion-1.png", "/images/motion/motion-2.png", "/images/motion/motion-3.png", "/images/motion/motion-4.png", "/images/motion/motion-5.png", "/images/motion/motion-6.png", "/images/motion/motion-7.png"],
     github: "https://github.com/vivpeng/youcode-2026",
     demo: "https://youtu.be/p8Kdu08og0k",
@@ -25,47 +12,16 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Portfolio Website",
-    teaser: "This website!",
-    description: [
-        {
-            heading: "A bit about this project",
-            text: "I went into this website with the hopes of making something that would reflect both my technical experience and creative personality. I designed this website incorporating personally hand drawn visuals with an accessible, clean layout to create a digital space that feels uniquely my own. This website represents not only my growth as a developer through the various projects and skills I have developed, but also my interest in exploring the intersection between software development, design, and user experience."
-        },
-        {
-            heading: "Features",
-            text: "This website was built using React and Tailwind CSS, with a component-based architecture to create reusable and maintainable UI elements. It incorporates features such as scroll-based animations, dynamic project cards, modal displays, and hover effects to create a more engaging user experience. The site also includes responsive layouts for different screen sizes, custom illustrations and visual assets integrated throughout the interface, and smooth transitions to enhance navigation. Built with modern web development practices, the website demonstrates front-end development skills including state management, component composition, styling systems, and deployment workflows."
-        }
-    ],
-    tech: ["React", "Tailwind CSS", "JavaScript", "Vite", "HTML", "UI/UX Design"],
-    images: ["/images/portfolio/portfolio-1.png", "/images/portfolio/portfolio-2.png", "/images/portfolio/portfolio-3.png"],
-    github: "https://github.com/vivpeng/vivianpeng",
-  },
-  {
-    id: 3,
-    title: "Toffee's Quest",
-    teaser: "2D platform game & puzzle to help coding beginners learn Java syntax.",
-    description:[
-        {
-            heading: "A bit about this project",
-            text: "This project was ideated and built by Arya and I for a final high school course project."
-        },
-        {
-            heading: "Features",
-            text: "i'm working on writing this one (:"
-        },
-        {
-            heading: "Fun fact",
-            text: "All the game visuals and sprites are designed and created by Arya and I."
-        }
-    ],
-    tech: ["Java", "Java Swing", "Object-Oriented Programming", "Game Logic"],
+    title: "toffee's quest",
+    teaser: "2d platform game & puzzle to help coding beginners learn java syntax. all game visuals and sprites are personally designed.",
+    tech: ["java", "java swing", "oop", "game logic"],
+    icon: "/images/toffee/toffee-icon.png",
     images: ["/images/toffee/toffee-1.png", "/images/toffee/toffee-2.png", "/images/toffee/toffee-3.png", "/images/toffee/toffee-4.png", "/images/toffee/toffee-5.png", "/images/toffee/toffee-6.png", "/images/toffee/toffee-7.png"],
     github: "https://github.com/vivpeng/toffees-quest",
   },
   {
-    id: 4,
-    title: "Cafe Hopper",
+    id: 3,
+    title: "cafe hopper",
     description:[
         {
             heading: "A bit about this project",
@@ -76,13 +32,13 @@ export const projects = [
             text: "i'm working on writing this one (:"
         }
     ],
-    tech: ["Java", "Java Swing", "JSON"],
+    tech: ["java", "java swing", "json"],
     images: ["/images/hopper/hopper-1.png", "/images/hopper/hopper-2.png", "/images/hopper/hopper-3.png"],
     github: "https://github.com/vivpeng/cafe-hopper",
   },
   {
-    id: 5,
-    title: "Exchangify",
+    id: 4,
+    title: "exchangify",
     description: [
         {
             heading: "A bit about this project",
@@ -93,7 +49,7 @@ export const projects = [
             text: "i'm working on writing this one (:"
         }
     ],
-    tech: ["TypeScript", "JavaScript", "CSS"],
+    tech: ["typescript", "javascript", "css"],
     images: ["/images/project2.png"],
     github: "https://github.com/abdullahmohammed1234/Exchangify",
     demo: "https://youtu.be/n0p--bACDOQ?si=B1CJXmyZZqA1c3kn",
