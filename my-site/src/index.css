@@ -63,6 +63,24 @@ body {
 
 /* HOME */
 
+.logo-fade-in {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: logoFadeIn 2s ease-out forwards;
+}
+
+@keyframes logoFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .star {
   position: absolute;
   opacity: 0;
@@ -79,7 +97,7 @@ body {
   }
 
   50% {
-    transform: scale(1.25);
+    transform: scale(1.3);
   }
 }
 

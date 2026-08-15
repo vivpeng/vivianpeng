@@ -22,7 +22,15 @@ function Home() {
             >
                 <Stars />
 
-                <div className="relative z-10 px-6 py-4 bg-[#070C1E]/50">
+                <div className="relative z-10 px-6 py-4 bg-[#070C1E]/50 text-center -translate-y-12">
+
+                    {/* Logo */}
+                    <img
+                        src="/images/logo.png"
+                        alt="Logo"
+                        className="logo-fade-in mx-auto mb-6 w-35"
+                    />
+
                     <Typewriter
                         onComplete={() => setTypingComplete(true)}
                     />
