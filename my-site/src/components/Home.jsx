@@ -36,21 +36,26 @@ function Home() {
                     />
 
                     <p
-                        className={`text-base mt-6 ${
-                            typingComplete ? "second-fade-in" : "opacity-0"
-                        }`}
+                        className={`text-base mt-6 ${typingComplete ? "second-fade-in" : "opacity-0"
+                            }`}
                     >
                         ▸ computer science @ ubc
                     </p>
 
                     <p
-                        className={`text-base mt-1 ${
-                            typingComplete ? "second-fade-in" : "opacity-0"
-                        }`}
+                        className={`text-base mt-1 ${typingComplete ? "second-fade-in" : "opacity-0"
+                            }`}
                     >
                         ▸ qa automation @ rbc
                     </p>
                 </div>
+
+                {/* Scroll indicator */}
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-white/40">
+                    <span className="text-xs tracking-widest -mb-2">scroll</span>
+                    <span className="text-s">⌄</span>
+                </div>
+
             </section>
 
             <img
