@@ -433,7 +433,7 @@ function Projects() {
                                 }
                             `}
                         >
-                            {project.title}
+
                         </span>
                     </button>
                 ))}
