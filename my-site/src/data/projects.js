@@ -3,7 +3,7 @@ export const projects = [
     id: 1,
     title: "motion",
     teaser: "1st place winner in its stream at wics x wids youcode 2026 hackathon. a user-friendly website made for nonprofits to manage volunteers and shifts, with a drag-and-drop interface, auto-assign, sorting functionality, and sign-in to save.",
-    tech: ["javascript", "html", "css", "supabass", "ui/ux design"],
+    tech: ["javascript", "html", "css", "supabase", "ui/ux design"],
     icon: "/images/motion/motion-icon.png",
     images: ["/images/motion/motion-1.png", "/images/motion/motion-2.png", "/images/motion/motion-3.png", "/images/motion/motion-4.png", "/images/motion/motion-5.png", "/images/motion/motion-6.png", "/images/motion/motion-7.png"],
     github: "https://github.com/vivpeng/youcode-2026",
