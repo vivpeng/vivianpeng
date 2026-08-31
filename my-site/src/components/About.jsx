@@ -30,7 +30,10 @@ function About() {
                     especially drawn to where creativity and code come together, my goal is to create meaningful experiences and real impact through what i design and build.
                 </p>
                 <p className="mt-5">
-                    ✦ computer science @ university of british columbia
+                    ✦ computer science, co-op @ university of british columbia
+                </p>
+                <p className="mt-1 ml-4">
+                    - trek excellence scholarship
                 </p>
 
                 <p className="mt-5">
