@@ -22,35 +22,19 @@ export const projects = [
   {
     id: 3,
     title: "cafe hopper",
-    description:[
-        {
-            heading: "A bit about this project",
-            text: "i'm working on writing this one (:"
-        },
-        {
-            heading: "Features",
-            text: "i'm working on writing this one (:"
-        }
-    ],
+    teaser: "an application designed for cafe enthusiasts to record cafes by name, address, menu and add visited status, rating, comments for journaling. possesses an interactive visual interface made with java swing and the ability to read and write saved data in json.",
     tech: ["java", "java swing", "json"],
+    icon: "/images/hopper/hopper-icon.png",
     images: ["/images/hopper/hopper-1.png", "/images/hopper/hopper-2.png", "/images/hopper/hopper-3.png"],
     github: "https://github.com/vivpeng/cafe-hopper",
   },
   {
     id: 4,
     title: "exchangify",
-    description: [
-        {
-            heading: "A bit about this project",
-            text: "Hack the Coast 2026 Hackathon."
-        },
-        {
-            heading: "Features",
-            text: "i'm working on writing this one (:"
-        }
-    ],
-    tech: ["typescript", "javascript", "css"],
-    images: ["/images/project2.png"],
+    teaser: "web marketplace for university staff and students to buy, sell, and trade dorm items and student essentials during move-in and move-out seasons, reducing waste.",
+    tech: ["typescript", "javascript", "css", "mongodb"],
+    icon: "/images/exchangify/exchangify-icon.png",
+    images: ["/images/exchangify/exchangify-1.png", "/images/exchangify/exchangify-2.png", "/images/exchangify/exchangify-3.png", "/images/exchangify/exchangify-4.png", "/images/exchangify/exchangify-5.png"],
     github: "https://github.com/abdullahmohammed1234/Exchangify",
     demo: "https://youtu.be/n0p--bACDOQ?si=B1CJXmyZZqA1c3kn",
   }

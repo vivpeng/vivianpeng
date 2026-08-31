@@ -26,7 +26,7 @@ function About() {
                 "
             >
                 <p className="italic mt-3">
-                    hi there! i love exploring and learning new things, whether through building software, picking up new activities, or meeting various people along the way.
+                    i love exploring and learning new things, whether through building software, picking up new activities, or meeting various people along the way.
                     especially drawn to where creativity and code come together, my goal is to create meaningful experiences and real impact through what i design and build.
                 </p>
                 <p className="mt-5">
@@ -86,7 +86,7 @@ function About() {
                 <span className="text-[#C8C0C6]">✦</span>
 
                 <a
-                    href="www.linkedin.com/in/vivianzhqpeng"
+                    href="https://www.linkedin.com/in/vivpeng/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-[#d87f6f] transition-colors duration-200 underline"

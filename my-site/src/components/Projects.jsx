@@ -116,8 +116,8 @@ function Projects() {
                                     onClick={handlePreviousImage}
                                     className="
                                         absolute
-                                        left-2
-                                        sm:left-3
+                                        left-1
+                                        sm:left-1
                                         top-1/2
                                         -translate-y-1/2
                                         text-[#8F8589]
@@ -138,7 +138,7 @@ function Projects() {
                                     className="
                                         absolute
                                         right-2
-                                        sm:right-3
+                                        sm:right-1
                                         top-1/2
                                         -translate-y-1/2
                                         text-[#8F8589]
@@ -226,7 +226,7 @@ function Projects() {
                     <h2
                         className="
                             text-base
-                            sm:text-lg
+                            text-m
                             text-[#27243A]
                             break-words
                             text-left

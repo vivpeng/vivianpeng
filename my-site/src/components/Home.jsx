@@ -39,14 +39,7 @@ function Home() {
                         className={`text-base mt-6 ${typingComplete ? "second-fade-in" : "opacity-0"
                             }`}
                     >
-                        ▸ computer science @ ubc
-                    </p>
-
-                    <p
-                        className={`text-base mt-1 ${typingComplete ? "second-fade-in" : "opacity-0"
-                            }`}
-                    >
-                        ▸ qa automation @ rbc
+                        computer science @ ubc
                     </p>
                 </div>
 
@@ -58,10 +51,10 @@ function Home() {
 
             </section>
 
-            <img
-                src="/images/background-transition.png"
+            {/* <img
+                src="/images/site_background_new.svg"
                 alt="transition to next page"
-            />
+            /> */}
         </>
     );
 }
