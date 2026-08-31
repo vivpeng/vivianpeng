@@ -1,7 +1,32 @@
+import { useEffect, useRef } from "react";
 import About from "./About";
 import Projects from "./Projects";
 
 function Main() {
+    const cloudRefs = useRef([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("cloud-visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.15,
+            }
+        );
+
+        cloudRefs.current.forEach((cloud) => {
+            if (cloud) observer.observe(cloud);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <section
             id="main"
@@ -19,6 +44,118 @@ function Main() {
                 className="block w-screen h-auto max-w-none"
             />
 
+            {/* Cloud 1 - enters from left */}
+            <img
+                ref={(el) => (cloudRefs.current[0] = el)}
+                src="/images/cloud-1.png"
+                alt=""
+                className="
+                    cloud
+                    cloud-left
+                    absolute
+                    w-100
+                    left-[-3%]
+                    top-[17%]
+                    z-[100]
+                "
+            />
+
+            {/* Cloud 2 - enters from left */}
+            <img
+                ref={(el) => (cloudRefs.current[1] = el)}
+                src="/images/cloud-2.png"
+                alt=""
+                className="
+                    cloud
+                    cloud-left
+                    absolute
+                    w-40
+                    left-[30%]
+                    top-[28%]
+                    z-[100]
+                "
+            />
+
+            {/* Cloud 3 - enters from right */}
+            <img
+                ref={(el) => (cloudRefs.current[2] = el)}
+                src="/images/cloud-3.png"
+                alt=""
+                className="
+                    cloud
+                    cloud-right
+                    absolute
+                    w-120
+                    right-[-3%]
+                    top-[78%]
+                    z-[100]
+                "
+            />
+
+            {/* Cloud 4 - enters from left */}
+            <img
+                ref={(el) => (cloudRefs.current[3] = el)}
+                src="/images/cloud-4.png"
+                alt=""
+                className="
+                    cloud
+                    cloud-left
+                    absolute
+                    w-70
+                    left-[-1%]
+                    top-[77%]
+                    z-[100]
+                "
+            />
+
+            {/* Cloud 5 - enters from right */}
+            <img
+                ref={(el) => (cloudRefs.current[4] = el)}
+                src="/images/cloud-5.png"
+                alt=""
+                className="
+                    cloud
+                    cloud-right
+                    absolute
+                    w-80
+                    right-[12%]
+                    top-[20%]
+                    z-[100]
+                "
+            />
+
+            {/* Cloud 6 - enters from right */}
+            <img
+                ref={(el) => (cloudRefs.current[5] = el)}
+                src="/images/cloud-6.png"
+                alt=""
+                className="
+                    cloud
+                    cloud-right
+                    absolute
+                    w-70
+                    right-[-5%]
+                    top-[28%]
+                    z-[100]
+                "
+            />
+
+            {/* Cloud 7 - enters from left */}
+            <img
+                ref={(el) => (cloudRefs.current[6] = el)}
+                src="/images/cloud-7.png"
+                alt=""
+                className="
+                    cloud
+                    cloud-left
+                    absolute
+                    w-99
+                    left-[19%]
+                    top-[78%]
+                    z-[100]
+                "
+            />
+
             {/* About + Projects */}
             <div
                 className="
@@ -28,59 +165,6 @@ function Main() {
                     py-24
                 "
             >
-                {/* Decorative clouds */}
-                <div className="absolute inset-0 pointer-events-none overflow-hidden">
-
-                    <img
-                        src="/images/cloud-1.png"
-                        alt=""
-                        className="
-                            cloud
-                            absolute
-                            w-40
-                            left-[-10%]
-                            top-[10%]
-                        "
-                    />
-
-                    <img
-                        src="/images/cloud-2.png"
-                        alt=""
-                        className="
-                            cloud
-                            absolute
-                            w-52
-                            right-[-12%]
-                            top-[25%]
-                        "
-                    />
-
-                    <img
-                        src="/images/cloud-3.png"
-                        alt=""
-                        className="
-                            cloud
-                            absolute
-                            w-36
-                            left-[-8%]
-                            bottom-[20%]
-                        "
-                    />
-
-                    <img
-                        src="/images/cloud-4.png"
-                        alt=""
-                        className="
-                            cloud
-                            absolute
-                            w-48
-                            right-[-10%]
-                            bottom-[5%]
-                        "
-                    />
-
-                </div>
-
                 {/* Content */}
                 <div
                     className="
