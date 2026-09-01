@@ -1,1 +1,3 @@
-site in progress
+to host locally:
+cd my-site
+npm run dev
