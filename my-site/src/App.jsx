@@ -1,8 +1,5 @@
 import Home from "./components/Home";
 import Main from "./components/Main";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
 import { useEffect, useState, useRef } from "react";
 
 function App() {
