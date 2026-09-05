@@ -1,3 +1,3 @@
-to host locally:
-cd my-site
+to host locally:  
+cd my-site  
 npm run dev
